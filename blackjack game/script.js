@@ -3,15 +3,22 @@ let secondCard = 9;
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
+let message = "";
+let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
+let cardsEl = document.getElementById("cards-el");
 
-if (sum <= 20) {
-  console.log("Do you want to draw a new card?");
-} else if (sum === 21) {
-  console.log("Blackjack!");
-  hasBlackJack = true;
-} else {
-  console.log("You lost!");
-  isAlive = false;
+function startGame() {
+  if (sum <= 20) {
+    message = "Do you want to draw a new card?";
+  } else if (sum === 21) {
+    message = "Blackjack!";
+    hasBlackJack = true;
+  } else {
+    message = "You lost!";
+    isAlive = false;
+  }
+  messageEl.textContent = message;
+  sumEl.textContent = "Sum: " + sum;
+  cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
 }
-
-console.log(sum);
