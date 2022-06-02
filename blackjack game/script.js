@@ -10,7 +10,8 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function getRandomCard() {
-  return 5;
+  let floor = Math.floor(Math.random() * 11) + 1;
+  return floor;
 }
 
 function startGame() {
@@ -18,11 +19,11 @@ function startGame() {
 }
 
 function renderGame() {
-  //messageEl.textContent = message;
   cardsEl.textContent = "Cards: ";
   for (let x = 0; x < cards.length; x++) {
     cardsEl.textContent += cards[x] + " ";
   }
+
   sumEl.textContent = "Sum: " + sum;
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
@@ -33,6 +34,7 @@ function renderGame() {
     message = "You lost!";
     isAlive = false;
   }
+  messageEl.textContent = message;
 }
 
 function newCard() {
@@ -43,3 +45,10 @@ function newCard() {
   console.log(cards);
   renderGame();
 }
+
+// function rollDice() {
+//   let floor = Math.floor(Math.random() * 6) + 1;
+//   return floor;
+// }
+
+// console.log(rollDice());
