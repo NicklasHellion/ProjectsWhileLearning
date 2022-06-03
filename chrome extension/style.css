@@ -3,3 +3,23 @@ body {
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+button {
+  color: #fff;
+  background-color: #5f9341;
+  width: 120px;
+  height: 35px;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+input {
+  border: solid 1px #5f9341;
+  height: 35px;
+  /*display: block;*/
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
