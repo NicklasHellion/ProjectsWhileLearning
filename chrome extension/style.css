@@ -23,3 +23,17 @@ input {
   padding: 10px;
   box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 20px;
+}
+
+li {
+  margin-top: 5px;
+}
+
+a {
+  color: #5f9341;
+}

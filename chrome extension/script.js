@@ -1,18 +1,25 @@
-let myLeads = ["A", "B", "C"];
+let myLeads = [];
 const inputBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
-  console.log(myLeads);
+  inputEl.value = "";
+  return renderLeads();
 });
 
-let listItems = "";
+function renderLeads() {
+  let listItems = "";
+  for (let i = 0; i < myLeads.length; i++) {
+    listItems += `
+  <li>
+      <a target='_blank' href="${myLeads[i]}">
+        ${myLeads[i]}
+      </a>
+  </li>
+`;
+  }
 
-for (let i = 0; i < myLeads.length; i++) {
-  listItems += "<li>" + myLeads[i] + "</li> ";
-  console.log(listItems);
+  ulEl.innerHTML = listItems;
 }
-
-ulEl.innerHTML = listItems;
