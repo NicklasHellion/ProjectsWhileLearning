@@ -7,11 +7,14 @@ body {
 button {
   color: #fff;
   background-color: #5f9341;
-  width: 120px;
-  height: 35px;
-  border: none;
+  border: 1px solid #5f9341;
   font-weight: bold;
   padding: 10px 20px;
+}
+
+#delete-btn {
+  color: #5f9341;
+  background-color: #fff;
 }
 
 input {
